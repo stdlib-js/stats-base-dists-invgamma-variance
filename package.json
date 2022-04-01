@@ -1,0 +1,38 @@
+{
+  "name": "@stdlib/stats-base-dists-invgamma-variance",
+  "version": "0.0.0",
+  "description": "Inverse gamma distribution variance.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./index.mjs",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/stats-base-dists-invgamma-variance.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "statistics",
+    "stats",
+    "distribution",
+    "dists",
+    "variance",
+    "dispersion",
+    "spread",
+    "continuous",
+    "probability",
+    "prob",
+    "gamma",
+    "inverse",
+    "invgamma",
+    "univariate"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
