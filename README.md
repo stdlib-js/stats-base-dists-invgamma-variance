@@ -69,7 +69,7 @@ when `α > 2`. Otherwise, the variance is not defined.
 ## Usage
 
 ```javascript
-import variance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-invgamma-variance@deno/mod.js';
+import variance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-invgamma-variance@v0.2.2-deno/mod.js';
 ```
 
 #### variance( alpha, beta )
@@ -140,7 +140,7 @@ v = variance( 3.0, -1.0 );
 ```javascript
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
 import EPS from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-eps@deno/mod.js';
-import variance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-invgamma-variance@deno/mod.js';
+import variance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-invgamma-variance@v0.2.2-deno/mod.js';
 
 var alpha;
 var beta;
