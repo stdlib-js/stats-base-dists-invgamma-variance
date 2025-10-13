@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-23)
+## Unreleased (2025-10-13)
 
 <section class="features">
 
@@ -34,6 +34,9 @@ This release closes the following issue:
 
 <details>
 
+-   [`150854b`](https://github.com/stdlib-js/stdlib/commit/150854b200a0db4ef3f2001c16d0c743c69ee32b) - **docs:** replace manual `for` loop in examples [(#8229)](https://github.com/stdlib-js/stdlib/pull/8229) _(by Harsh)_
+-   [`fc438e0`](https://github.com/stdlib-js/stdlib/commit/fc438e0edbad0689d6923d6f3edb959b96597662) - **test:** use standardized assertion messages and fix lint errors _(by Philipp Burckhardt)_
+-   [`9c21fd2`](https://github.com/stdlib-js/stdlib/commit/9c21fd20ef8b8a6a88abb96d80ea6d8e4c5434eb) - **test:** use .strictEqual() instead of .equal() _(by Philipp Burckhardt)_
 -   [`367e8f9`](https://github.com/stdlib-js/stdlib/commit/367e8f90bec98d87e4bf044f0cf8baf12602c3dd) - **chore:** clean-up _(by Athan Reines)_
 -   [`c82ae2b`](https://github.com/stdlib-js/stdlib/commit/c82ae2ba1e86b0a76189ae678d7ca5cd2dc18e1f) - **feat:** add C implementation for `stats/base/dists/invgamma/variance` [(#3943)](https://github.com/stdlib-js/stdlib/pull/3943) _(by Aayush Khanna, Philipp Burckhardt, stdlib-bot)_
 -   [`1db3cc5`](https://github.com/stdlib-js/stdlib/commit/1db3cc5291f4d08855501db089953299de98b8a4) - **bench:** refactor random number generation in `stats/base/dists/invgamma` [(#4974)](https://github.com/stdlib-js/stdlib/pull/4974) _(by Karan Anand)_
@@ -48,10 +51,11 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 4 people contributed to this release. Thank you to the following contributors:
+A total of 5 people contributed to this release. Thank you to the following contributors:
 
 -   Aayush Khanna
 -   Athan Reines
+-   Harsh
 -   Karan Anand
 -   Philipp Burckhardt
 
