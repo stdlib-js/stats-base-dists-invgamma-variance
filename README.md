@@ -62,32 +62,38 @@ when `α > 2`. Otherwise, the variance is not defined.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/stats-base-dists-invgamma-variance
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var variance = require( '@stdlib/stats-base-dists-invgamma-variance' );
+variance = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-invgamma-variance@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var variance = require( 'path/to/vendor/umd/stats-base-dists-invgamma-variance/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-invgamma-variance@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.variance;
+})();
+</script>
 ```
 
 #### variance( alpha, beta )
@@ -155,11 +161,16 @@ v = variance( 3.0, -1.0 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var EPS = require( '@stdlib/constants-float64-eps' );
-var uniform = require( '@stdlib/random-array-uniform' );
-var logEachMap = require( '@stdlib/console-log-each-map' );
-var variance = require( '@stdlib/stats-base-dists-invgamma-variance' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-eps@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-invgamma-variance@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var opts = {
     'dtype': 'float64'
@@ -168,6 +179,11 @@ var alpha = uniform( 10, EPS, 10.0, opts );
 var beta = uniform( 10, EPS, 10.0, opts );
 
 logEachMap( 'α: %0.4f, β: %0.4f, Var(X;α,β): %0.4f', alpha, beta, variance );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -176,98 +192,7 @@ logEachMap( 'α: %0.4f, β: %0.4f, Var(X;α,β): %0.4f', alpha, beta, variance )
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/stats/base/dists/invgamma/variance.h"
-```
-
-#### stdlib_base_dists_invgamma_variance( alpha, beta )
-
-Returns the variance of an inverse gamma distribution.
-
-```c
-double out = stdlib_base_dists_invgamma_variance( 3.0, 5.0 );
-// returns ~6.25
-```
-
-The function accepts the following arguments:
-
--   **alpha**: `[in] double` shape parameter.
--   **beta**: `[in] double` scale parameter.
-
-```c
-double stdlib_base_dists_invgamma_variance( const double alpha, const double beta );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/stats/base/dists/invgamma/variance.h"
-#include <stdlib.h>
-#include <stdio.h>
-
-static double random_uniform( const double min, const double max ) {
-    double v = (double)rand() / ( (double)RAND_MAX + 1.0 );
-    return min + ( v*(max-min) );
-}
-
-int main( void ) {
-    double alpha;
-    double beta;
-    double y;
-    int i;
-
-    for ( i = 0; i < 25; i++ ) {
-        alpha = random_uniform( 0.0, 20.0 );
-        beta = random_uniform( 0.0, 20.0 );
-        y = stdlib_base_dists_invgamma_variance( alpha, beta );
-        printf( "α: %lf, β: %lf, Var(X;α,β): %lf\n", alpha, beta, y );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
